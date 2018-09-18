@@ -124,8 +124,7 @@ const checkVisible = function checkVisible(component) {
   }
 
   const parent = scrollParent(node);
-  const isOverflow = component.props.overflow &&
-                     parent !== node.ownerDocument &&
+  const isOverflow = parent !== node.ownerDocument &&
                      parent !== document &&
                      parent !== document.documentElement;
   const visible = isOverflow ?
